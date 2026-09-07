@@ -77,16 +77,12 @@ Aplicação web criada para ajudar casais a planejarem financeiramente a mudanç
 ## Estatísticas do GitHub
 
 <p align="center">
-  <img
-    height="165"
-    src="https://github-readme-stats.vercel.app/api?username=dasilvakevyn&show_icons=true&hide_border=true&bg_color=0D1117&title_color=F97316&text_color=FFFFFF&icon_color=F97316&locale=pt-br"
-    alt="Estatísticas do GitHub de Kevyn"
-  />
-  <img
-    height="165"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=dasilvakevyn&layout=compact&hide_border=true&bg_color=0D1117&title_color=F97316&text_color=FFFFFF"
-    alt="Linguagens mais utilizadas por Kevyn"
-  />
+  <img height="165"
+    src="./profile/stats-pt.svg"
+    alt="Estatísticas do Github de Kevyn"/>
+  <img height="165"
+    src="./profile/languages-pt.svg"
+    alt="Linguagens mais usadas por Kevyn"/>
 </p>
 
 <br>

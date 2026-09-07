@@ -78,16 +78,12 @@ A web application designed to help couples financially plan their move into thei
 ## GitHub statistics
 
 <p align="center">
-  <img
-    height="165"
-    src="https://github-readme-stats.vercel.app/api?username=dasilvakevyn&show_icons=true&hide_border=true&bg_color=0D1117&title_color=F97316&text_color=FFFFFF&icon_color=F97316"
-    alt="Kevyn's GitHub statistics"
-  />
-  <img
-    height="165"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=dasilvakevyn&layout=compact&hide_border=true&bg_color=0D1117&title_color=F97316&text_color=FFFFFF"
-    alt="Kevyn's most-used languages"
-  />
+  <img height="165"
+    src="./profile/stats-en.svg"
+    alt="Kevyn's Github Statistics"/>
+    <img height="165"
+    src="./profile/languages-en.svg"
+    alt="Kevyn's most-used languages"/>
 </p>
 
 <br>
