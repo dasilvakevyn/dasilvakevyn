@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./assets/bg.png"
+    <img src="./assets/bg2.png"
     alt="Profile's Banner"
     width="100%"/>
 
@@ -7,7 +7,7 @@
 
 # 🍥 Olá, eu sou Kevyn Herbert!
 
-### Assistente de Desenvolvimento construindo seu próprio caminho ninja no mundo da tecnologia.
+### Assistente de Desenvolvimento com experiência em aplicações web, automação e ambientes conteinerizados.
 
 [🇧🇷 Português](README.md) | [🇺🇸 English](README.en.md)
 
