@@ -1,0 +1,65 @@
+﻿name: Update profile statistics
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/github-stats.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  generate-statistics:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Create output directory
+        run: mkdir -p profile
+
+      - name: Generate Portuguese statistics
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&bg_color=0D1117&title_color=F97316&text_color=FFFFFF&icon_color=F97316&locale=pt-br
+          path: profile/stats-pt.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate Portuguese languages
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&bg_color=0D1117&title_color=F97316&text_color=FFFFFF&locale=pt-br
+          path: profile/languages-pt.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate English statistics
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&bg_color=0D1117&title_color=F97316&text_color=FFFFFF&icon_color=F97316
+          path: profile/stats-en.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate English languages
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&hide_border=true&bg_color=0D1117&title_color=F97316&text_color=FFFFFF
+          path: profile/languages-en.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit generated cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "docs: update GitHub statistics" || exit 0
+          git push
